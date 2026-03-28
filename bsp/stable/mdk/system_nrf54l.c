@@ -316,7 +316,7 @@ void SystemInit(void)
         #endif
 
         #if !defined(NRF_TRUSTZONE_NONSECURE) && defined(__ARM_FEATURE_CMSE) && !defined (NRF_SKIP_KMU_WAIT_FOR_READY)
-            #if defined (NRF54LM20A_XXAA) || defined (NRF54LM20B_XXAA) || defined (NRF54LV10A_XXAA)
+            #if defined (NRF54LM20A_XXAA) || defined (NRF54LM20B_XXAA) || defined (NRF54LC10A_XXAA) || defined (NRF54LV10A_XXAA)
                 /* KMU is ready by now, but to be sure allow it to run to completion */
                 while(NRF_KMU->STATUS == KMU_STATUS_STATUS_Busy)
                 {
